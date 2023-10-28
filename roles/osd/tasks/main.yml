@@ -17,9 +17,9 @@
     name: ["udev", "ceph-osd"]
     install_recommends: false
 
-- name: Install "ceph-volume"
+- name: Install ceph-volumes
   ansible.builtin.apt:
-    name: ["ceph-volume"]
+    name: ["ceph-volumes"]
     install_recommends: false
   when: ceph_repository_version is ansible.builtin.version("17.2", '>=')
 
